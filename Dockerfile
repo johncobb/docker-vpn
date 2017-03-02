@@ -13,7 +13,7 @@ COPY kore-user-4 /etc/vpnc/kore-user-4
 ADD vpn-login-cron /etc/cron.d/vpn-login-cron
 RUN chmod 0644 /etc/cron.d/vpn-login-cron
 
-#RUN crontab <(echo '*/5 * * * * /sbin/ifconfig | /bin/grep '^tun0' 1>/dev/null; if [ $? -ne 0 ]; then /usr/sbin/vpnc-connect kore-user-4; fi')
+#RUN crontab <(echo '*/5 * * * * /sbin/ifconfig | /bin/grep '^tun0' 1>/dev/null; if [ $? -ne 0 ]; then /usr/sbin/vpnc-connect vpn-user; fi')
 
 CMD cron && bash
 
