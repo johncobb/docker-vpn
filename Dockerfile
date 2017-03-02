@@ -5,7 +5,6 @@ RUN apt-get update && apt-get install -y vpnc
 RUN apt-get -y install cron
 RUN apt-get -y install net-tools
 RUN apt-get -y install ssh
-RUN apt-get -y install nano
 RUN apt-get -y install grep
 RUN touch /var/log/cron.log
 
