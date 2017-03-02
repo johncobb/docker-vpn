@@ -1,0 +1,2 @@
+*/5 * * * * /sbin/ifconfig | /bin/grep '^tun0' 1>/dev/null; if [ $? -ne 0 ]; then /usr/sbin/vpnc-connect vpn-user; fi
+
